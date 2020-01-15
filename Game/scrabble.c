@@ -20,7 +20,7 @@ int score(char* s) {
 	int i = 0, count = 0;
 	
 	while(s[i] != '\0') {
-		if( (s[i]>='A' && s[i]<='Z') || (s[i]>='a' && s[i]<='z') )
+		if( (s[i]>='A' && s[i]<='Z') )
 			switch(s[i]){
 				case 'D': case 'G':
 					count += 2;
