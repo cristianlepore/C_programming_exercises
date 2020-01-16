@@ -3,12 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int check(int num, int* repeted) {
+int checkForBouble(int num, int** repeted) {
 	int i;
 	
-	for(i=0; i<sizeof(repeted)/sizeof(repeted[0]); i++)
-		if(num = repeted[i]){
-			printf("Repeted; %d\n", repeted[i]);
+		printf("Value %d\n", *repeted[0);
+		if(num = *repeted){
 			return 0;
 		}
 				
@@ -35,7 +34,7 @@ int* repetedDigits(int n){
 		int k=0;
 		while(k<j){
 			if(p[j] == p[k]) {
-				if(check(p[j], repeted)){
+				if(checkForBouble(p[j], &repeted)){
 					repeted[index++] = p[j];
 					realloc(repeted, 1 * sizeof(int));
 					break;
@@ -55,9 +54,6 @@ int main() {
 
 	int* p = repetedDigits(n);
 	
-	for(i=0; i<sizeof(p)/sizeof(p[0]); i++)
-		printf("%d\n", p[i]);
-		
 	free(p);
 	return 0;
 }
